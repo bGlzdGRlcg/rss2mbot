@@ -51,4 +51,4 @@ go mod tidy && go build
 /sub rss_url (订阅rss)
 /unsub index (取消订阅rss)
 /getsublist (获取订阅列表)
-``
+```
