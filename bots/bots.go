@@ -234,10 +234,9 @@ func Start_bots() {
 							continue
 						}
 						for _, item := range items {
-							content := fmt.Sprintf("@%s \n📰 %s\n\n%s\n\nLink: %s",
+							content := fmt.Sprintf("@%s \n📰 %s\n\nLink: %s",
 								m_user.Username,
 								item.Title,
-								item.Description,
 								item.Link)
 							ms.PostdToot(ms_c, content)
 						}
