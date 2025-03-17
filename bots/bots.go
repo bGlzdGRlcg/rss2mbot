@@ -68,6 +68,19 @@ func Start_bots() {
 		return c.Send(Start_Text)
 	})
 
+	b.Handle("/ping", func(c tele.Context) error {
+		if User_map[c.Sender().ID] == nil {
+			User_map[c.Sender().ID] = &users.User{
+				Userid: c.Sender().ID,
+				IsBind: false,
+			}
+		}
+		if err := saveUserMap(); err != nil {
+			fmt.Println(err)
+		}
+		return c.Send("200 ok")
+	})
+
 	b.Handle("/bind", func(c tele.Context) error {
 		if User_map[c.Sender().ID] == nil {
 			User_map[c.Sender().ID] = &users.User{
