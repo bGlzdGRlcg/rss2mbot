@@ -41,8 +41,7 @@ go mod tidy && go build
 ./rss2mbot
 ```
 
-
-## bot的使用
+## bot 的使用
 
 ```
 /getid username (获取Mastodon ID)
@@ -51,4 +50,5 @@ go mod tidy && go build
 /sub rss_url (订阅rss)
 /unsub index (取消订阅rss)
 /getsublist (获取订阅列表)
+/ping (200 ok)
 ```
